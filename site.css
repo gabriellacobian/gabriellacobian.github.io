@@ -1,4 +1,5 @@
-.biobox {
+.class {
+  biobox;
     border-width: 2px;
     border-style: solid;
     border-color: black;
