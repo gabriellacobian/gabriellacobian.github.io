@@ -1,11 +1,7 @@
-.class {
-  biobox;
+.biobox {
     border-width: 2px;
     border-style: solid;
     border-color: black;
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px
-    padding-left: 10px;
+    padding: 10px 10px 10px 10px 10px;
     width: 320px;
 }
