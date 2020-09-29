@@ -4,54 +4,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
   <link rel="stylesheet" href="site.css">
+
+  <script>
+      window.onload = function() {
+        // functions that run after page loads
+        displayGreeting();
+        fetchWeather();
+      }
+      // display good morning, afternoon or evening based on the time
+      function displayGreeting() {
+        var date = new Date();
+        var hour = date.getHours();
+        var description = "";
+        if (hour < 12) {
+          description = " in Tucson, AZ is";
+        } else if (hour < 17) {
+          description = "in Tucson, AZ is";
+        } else {
+          description = "in Tucson, AZ is";
+        }
+        
+      }
+      // get weather data from openweathermap and display the current temp
+      function fetchWeather() {
+        fetch("https://api.openweathermap.org/data/2.5/weather?zip=85706,US&appid=1fa6d6b1a7710ca8b30b42a3b94e5897&units=imperial")
+        .then(function(resp) { return resp.json() })
+        .then(function(data) {
+
+        document.getElementById("weather").innerHTML = "The current temperature is "+ data.main.temp + "&#8457; + in Tucson,AZ";
+
+        })
+        .catch(function() {
+        document.getElementById("weather").innerHTML = "Error in fetchWeather function";
+        });
+      }
+    </script>
   </head>
-  <body>
+    <body>
 
-  <center>
+    <center>
 
-    <div class="content_container">
+      <div class="content_container">
 
-    <div class="image_container">
-      <img src="https://tucson.com/app/images/ua/storm.jpg">
-    </div>
-
-      <div class="name_container">
-        Gabriella Cobian
+      <div class="image_container">
+        <img src="https://tucson.com/app/images/ua/storm.jpg">
       </div>
 
-  <center>
+        <div class="name_container">
+          Gabriella Cobian
+        </div>
 
-  <div class="bio_container">
-    I'm currently a Junior & full time student at the UA.
-    I work for the Daily Wildcat as well, my beats are science & arts & life.
-    I adore pandas & many other fluffy animals.
-  </div>
+    <center>
 
-  <div class="clear"></div>
-
-<div class="news_container">
-        <div class="newstitle">New Sites</div>
-
-      <div class="newssite"><a href="https://www.wildcat.arizona.edu"
-        target="_blank">WILDCAT</a></div>
-
-      <div class="newssite"><a href="http://uanews.arizona.edu"
-        target="_blank">UANEWS</a></div>
-
-      <div class="newssite"><a href="https://www.wsj.com"
-        target="_blank">Wall Street Journal</a></div>
-
-      <div class="newssite"><a href="https://www.latimes.com"
-        target="_blank">Los Angeles Times</a></div>
-
-      <div class="newssite"><a href="https://www.espn.com"
-        target="_blank">ESPN</a></div>
-
-      <div class="newssite"><a href="https://tucson.com"
-        target="_blank">Arizona Daily Star</a></div>
-
-      <div class="clear"></div>
+    <div class="bio_container">
+      I'm currently a Junior & full time student at the UA.
+      I work for the Daily Wildcat as well, my beats are science & arts & life.
+      I adore pandas & many other fluffy animals.
     </div>
-  </center>
+
+    <div class="clear"></div>
+
+  <div class="news_container">
+          <div class="newstitle">New Sites</div>
+
+        <div class="newssite"><a href="https://www.wildcat.arizona.edu"
+          target="_blank">WILDCAT</a></div>
+
+        <div class="newssite"><a href="http://uanews.arizona.edu"
+          target="_blank">UANEWS</a></div>
+
+        <div class="newssite"><a href="https://www.wsj.com"
+          target="_blank">Wall Street Journal</a></div>
+
+        <div class="newssite"><a href="https://www.latimes.com"
+          target="_blank">Los Angeles Times</a></div>
+
+        <div class="newssite"><a href="https://www.espn.com"
+          target="_blank">ESPN</a></div>
+
+        <div class="newssite"><a href="https://tucson.com"
+          target="_blank">Arizona Daily Star</a></div>
+
+        <div class="clear"></div>
+      </div>
+    </center>
+    </body>
+  </head>
+  <body>
+    <div id="greeting"></div>
+    <div id="weather"></div>
   </body>
-    </html>
+  </html>
