@@ -96,7 +96,7 @@ img {
 }
 
 .cell_address {
-  
+
 }
 
 .cell_url {
@@ -105,4 +105,10 @@ img {
 
 .cell_phone {
 
+}
+
+#mapid {
+  height: 640px;
+  width: 640px;
+  border: 2px solid blue;
 }
