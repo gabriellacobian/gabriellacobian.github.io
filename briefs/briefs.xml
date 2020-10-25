@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>Gabriella's Briefs</title>
+  <link>https://gabriellacobian.github.io/about.html</link>
+  <description>Stories Summary</description>
+  <item>
+    <pubDate>Mon, 19 Oct 2020 09:00:00 -0700</pubDate>
+    <title>Summary One</title>
+    <link>https://gabriellacobian.github.io/about.html</link>
+    <description>ITEM ONE DESCRIPTION</description>
+    <enclosure url="https://gabriellacobian.github.io/briefs/SummaryOne.mp3" type="audio/mp3" length="716299"></enclosure>
+    <guid isPermaLink="false">https://gabriellacobian.github.io/briefs/SummaryOne.mp3</guid>
+  </item>
+  <item>
+    <pubDate>Mon, 19 Oct 2020 09:00:00 -0700</pubDate>
+    <title>Summary Two</title>
+    <link>https://gabriellacobian.github.io/about.html</link>
+    <description>ITEM TWO DESCRIPTION</description>
+    <enclosure url="https://gabriellacobian.github.io/briefs/SummaryTwo.mp3" type="audio/mp3" length="1108763"></enclosure>
+    <guid isPermaLink="false">https://gabriellacobian.github.io/briefs/SummaryTwo.mp3</guid>
+  </item>
+</channel>
+</rss>
