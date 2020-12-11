@@ -18,7 +18,6 @@
         var mymap = drawMap();
         displayRSSFeed();
         fetchWeather();
-        drawMap();
         listSheet(mymap);
       }
       function drawMap() {
@@ -32,17 +31,7 @@
       zoomOffset: -1,
       accessToken: 'pk.eyJ1IjoiZ2FicmllbGxhY29iaWFuIiwiYSI6ImNrZzQyY3A1dDBnZzEyemxkeXVwZGx5N2wifQ.oFgLOr6BAKanDGDueAD7Zw'
   }).addTo(mymap);
-  var marker1 = L.marker([32.181077, -110.93032]).addTo(mymap);
-  var marker2 = L.marker([32.249415, -110.839004]).addTo(mymap);
-  var marker3 = L.marker([32.16304, -110.969503]).addTo(mymap);
-  var marker4 = L.marker([32.22785, -110.943626]).addTo(mymap);
-  var marker5 = L.marker([32.221222, -110.934887]).addTo(mymap);
 
-  marker1.bindPopup("<b>Location A</b><br>I am a popup.");
-  marker2.bindPopup("<b>Location B</b><br>I am a popup.");
-  marker3.bindPopup("<b>Location C</b><br>I am a popup.");
-  marker4.bindPopup("<b>Location D</b><br>I am a popup.");
-  marker5.bindPopup("<b>Location E</b><br>I am a popup.");
   return mymap;
 }
 function addPin(mymap, lat, lon, name) {
